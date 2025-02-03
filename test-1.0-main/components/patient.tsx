@@ -102,7 +102,7 @@ const PatientDashboard: React.FC = () => {
                 <span className="font-semibold text-gray-700">
                   Assigned Doctor:
                 </span>
-                <span className="text-gray-600">Dr.####</span>
+                <span className="text-gray-600">Dr.Sathira</span>
               </div>
               <div className="flex justify-between col-span-1 md:col-span-2 p-4">
                 <span className="font-semibold text-gray-700">
