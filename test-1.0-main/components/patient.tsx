@@ -1,212 +1,65 @@
-import React from "react";
-import {
-  FaUser,
-  FaChartBar,
-  FaFlask,
-  FaEnvelope,
-  FaBell,
-  FaCog,
-  FaTwitter,
-  FaFacebookF,
-  FaInstagram,
-  FaUserMd
-} from "react-icons/fa"; // Example icons
+import React from 'react';
 
 const PatientDashboard: React.FC = () => {
   return (
-    <div className="flex min-h-screen font-sans bg-white">
-      {/* ========== LEFT SIDEBAR ========== */}
-      <aside className="w-60 border-r border-gray-300 bg-white flex flex-col items-start">
-        {/* Logo */}
-        <div className="p-4 mb-6">
-          <h1 className="text-2xl font-bold text-blue-500">CuraSync</h1>
+    <div className="min-h-screen bg-gray-100 p-6">
+      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6">
+        <div className="flex justify-between items-center mb-6">
+          <h1 className="text-2xl font-bold text-blue-600">CuraSync</h1>
+          <nav className="space-x-4">
+            <a href="#" className="text-gray-700 hover:text-blue-600">Home</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600">About Us</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600">Our Services</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600">Contact</a>
+          </nav>
         </div>
 
-        {/* Sidebar Navigation */}
-        <nav className="flex flex-col space-y-4 w-full px-4">
-          <SidebarItem icon={<FaUser />} label="Patient" />
-          <SidebarItem icon={<FaUserMd />} label="Doctor" />
-          <SidebarItem icon={<FaChartBar />} label="TimeLine" />
-          <SidebarItem icon={<FaFlask />} label="Visualization" />
-          <SidebarItem icon={<FaEnvelope />} label="Messaging" />
-          <SidebarItem icon={<FaBell />} label="Notification" />
-          <SidebarItem icon={<FaCog />} label="Settings" />
-        </nav>
-      </aside>
+        <div className="mb-6">
+          <h2 className="text-xl font-semibold text-gray-800">Patient</h2>
+          <p className="text-gray-600">Sarah Johnson</p>
+        </div>
 
-      {/* ========== MAIN CONTENT WRAPPER ========== */}
-      <div className="flex-1 flex flex-col">
-        {/* ========== TOP NAVBAR ========== */}
-        <header className="flex items-center justify-between bg-white shadow-md py-3 px-6 border-b border-gray-100">
-          {/* Center Nav Links */}
-          <div className="flex space-x-6">
-            <a className="text-gray-700 hover:text-blue-500" href="#">
-              Home
-            </a>
-            <a className="text-gray-700 hover:text-blue-500" href="#">
-              About Us
-            </a>
-            <a className="text-gray-700 hover:text-blue-500" href="#">
-              Our Services
-            </a>
-            <a className="text-gray-700 hover:text-blue-500" href="#">
-              Contact
-            </a>
-          </div>
-
-          {/* Right Social Icons + Patient Button */}
-          <div className="flex items-center space-x-4">
-            <FaTwitter className="text-gray-600 hover:text-blue-500 cursor-pointer" />
-            <FaFacebookF className="text-gray-600 hover:text-blue-500 cursor-pointer" />
-            <FaInstagram className="text-gray-600 hover:text-pink-500 cursor-pointer" />
-            <button className="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">
-              Patient
-            </button>
-          </div>
-        </header>
-
-        {/* ========== MAIN CONTENT AREA ========== */}
-        <main className="flex-1 p-8 bg-white relative">
-          {/* Page Title */}
-          <h1 className="text-3xl font-bold text-gray-600 mb-8">Patient</h1>
-
-          {/* Patient Info Card */}
-          <div className="bg-white shadow-md rounded-lg border border-gray-300 p-6 w-full max-w-2xl">
-            <div className="mb-4">
-              <h2 className="text-2xl font-semibold text-gray-900">
-                Jessica Alexander
-              </h2>
-              <p className="text-gray-600">29 Yrs, Female</p>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-2 border border-black">
-              <div className="flex justify-between border-b border-r border-black p-4">
-                <span className="font-semibold text-gray-700">
-                  Joined date:
-                </span>
-                <span className="text-gray-600">14 Mar 2024</span>
-              </div>
-              <div className="flex justify-between border-b border-black p-4">
-                <span className="font-semibold text-gray-700">
-                  Type of reports:
-                </span>
-                <span className="text-gray-600">####</span>
-              </div>
-              <div className="flex justify-between border-b border-r border-black p-4">
-                <span className="font-semibold text-gray-700">
-                  Referring Doctor:
-                </span>
-                <span className="text-gray-600">Dr.#####</span>
-              </div>
-              <div className="flex justify-between border-b border-black p-4">
-                <span className="font-semibold text-gray-700">
-                  Assigned Doctor:
-                </span>
-                <span className="text-gray-600">Dr.Sathira</span>
-              </div>
-              <div className="flex justify-between col-span-1 md:col-span-2 p-4">
-                <span className="font-semibold text-gray-700">
-                  Address:
-                </span>
-                <span className="text-gray-600">
-                  795 Ave Rockland, Outermont, California
-                </span>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-700">Vital Statistics</h3>
+            <div className="space-y-2">
+              <p><span className="font-medium">Height:</span> 57" (170 cm)</p>
+              <p><span className="font-medium">Weight:</span> 145lb (65.8 kg)</p>
+              <p><span className="font-medium">BMI:</span> 22.7</p>
+              <p><span className="font-medium">Blood Pressure:</span> 120/80 mmHg</p>
+              <p><span className="font-medium">Temperature:</span> 98.6°F (37°C)</p>
+              <p><span className="font-medium">Pulse Rate:</span> 72 bpm</p>
             </div>
           </div>
 
-          {/* Document Preview (Right Side Box) */}
-          <div className="absolute top-8 right-8 w-72 h-40 bg-[#7DADEB] rounded-md shadow-lg flex items-center justify-center p-4">
-            <div className="text-center">
-              <button className="bg-white mb-2 px-4 py-2 rounded-md shadow-md hover:bg-gray-200 transition">
-                {/* Dummy Icon or Upload */}
-                Upload/Download
-              </button>
-              <p className="text-white font-medium">
-                Preview Your Document from here
-              </p>
+          <div>
+            <h3 className="text-lg font-semibold text-gray-700">Emergency Contact</h3>
+            <div className="space-y-2">
+              <p><span className="font-medium">Name:</span> Michael Johnson</p>
+              <p><span className="font-medium">Relation:</span> Spouse</p>
+              <p><span className="font-medium">Phone:</span> +1 (555) 876-5432</p>
             </div>
           </div>
+        </div>
 
-          {/* Doctor Selection */}
-          <div className="mt-8">
-            <h3 className="mb-3 text-4xl font-bold text-black-100 bg-[#19475B] p-6 rounded-xl">
-              Choose your Doctor
-            </h3>
-            <div className="flex gap-5 overflow-x-auto pb-4 bg-[#19475B] p-8 rounded-xl">
-              {/* Doctor Card 1 */}
-              <div className="flex-shrink-0 w-72 h-80 rounded-xl bg-white p-4 text-center shadow">
-                <h4 className="mb-1 text-xl font-bold text-gray-800">
-                  <img
-                    src="/images/doc1.jpeg" // Replace with your image URL
-                    alt="Dr. Travis Oman"
-                    className="mx-auto mb-4 h-32 w-32 rounded-full object-cover"
-                  />
-                  Dr. Travis Oman
-                </h4>
-                <p className="mb-1 text-gray-600">Ophthalmologist</p>
-                <p className="mb-3 text-gray-600">120 Reviews</p>
-                <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-600">
-                  Book Now
-                </button>
-              </div>
-
-              {/* Doctor Card 2 */}
-              <div className="flex-shrink-0 w-72 h-80 rounded-xl bg-white p-4 text-center shadow">
-                <h4 className="mb-1 text-xl font-bold text-gray-800">
-                  <img
-                    src="/images/doc2.jpeg" // Replace with your image URL
-                    alt="Dr. Vivian Monroe"
-                    className="mx-auto mb-4 h-32 w-32 rounded-full object-cover"
-                  />
-                  Dr. Vivian Monroe
-                </h4>
-                <p className="mb-1 text-gray-600">Dentician</p>
-                <p className="mb-3 text-gray-600">120 Reviews</p>
-                <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-600">
-                  Book Now
-                </button>
-              </div>
-
-              {/* Doctor Card 3 */}
-              <div className="flex-shrink-0 w-72 h-80 rounded-xl bg-white p-4 text-center shadow">
-                <h4 className="mb-1 text-xl font-bold text-gray-800">
-                  <img
-                    src="/images/doc3.jpeg" // Replace with your image URL
-                    alt="Dr. Annah Ray"
-                    className="mx-auto mb-4 h-32 w-32 rounded-full object-cover"
-                  />
-                  Dr. Annah Ray
-                </h4>
-                <p className="mb-1 text-gray-600">Gastroenterologist</p>
-                <p className="mb-3 text-gray-600">120 Reviews</p>
-                <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-600">
-                  Book Now
-                </button>
-              </div>
-
-              {/* Add more doctor cards if needed */}
-            </div>
+        <div className="mb-6">
+          <h3 className="text-lg font-semibold text-gray-700">Allergies</h3>
+          <div className="space-y-2">
+            <p><span className="font-medium">Severe:</span> Drug: Penicillin</p>
+            <p><span className="font-medium">Moderate:</span> Food: Peanuts</p>
+            <p><span className="font-medium">Wild:</span> Environmental: Pollen</p>
           </div>
-        </main>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-semibold text-gray-700">Current Medications</h3>
+          <div className="space-y-2">
+            <p><span className="font-medium">Albuterol Inhaler:</span> Dosage: 2 puffs as needed, Frequency: Every 4-6 hours</p>
+            <p><span className="font-medium">Zyrtec:</span> Dosage: 10mg, Frequency: Once daily</p>
+          </div>
+        </div>
       </div>
     </div>
-  );
-};
-
-/** Helper component for the sidebar items. */
-const SidebarItem: React.FC<{ icon: React.ReactNode; label: string }> = ({
-  icon,
-  label,
-}) => {
-  return (
-    <a
-      href="#"
-      className="flex items-center space-x-3 text-gray-700 py-2 px-2 rounded-md hover:bg-gray-100"
-    >
-      <span className="text-xl">{icon}</span>
-      <span>{label}</span>
-    </a>
   );
 };
 
