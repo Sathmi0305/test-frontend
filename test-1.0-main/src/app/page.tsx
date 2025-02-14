@@ -3,6 +3,8 @@ import Patient from '../../components/patient';
 import Message from '../../components/message';
 import Timeline from '../../components/timeline';
 import Visualization from '../../components/visualization';
+import DoctorList from '../../components/doctor-list';
+import Pharmacy from '../../components/pharmacy';
 
 
 export default function homepage() {
@@ -13,7 +15,8 @@ export default function homepage() {
       <Message/>
       <Timeline/>
       <Visualization/>
-   
+      <DoctorList/>
+      <Pharmacy/>   
     </div>
   );
 }
