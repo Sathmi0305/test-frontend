@@ -5,6 +5,13 @@ const HealthcareLanding = () => {
     <div className="min-h-screen relative">
       {/* Background Layers */}
       <div className="absolute inset-0 z-0">
+      <div 
+          className="absolute inset-0 bg-cover bg-center blur-[8px]"
+          style={{
+            backgroundImage: 'url("/images/stethoscope.jpg")',
+          }}
+        />
+        
         {/* Base gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-gray-100" />
         

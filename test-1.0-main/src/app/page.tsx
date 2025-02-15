@@ -6,6 +6,7 @@ import Visualization from '../../components/visualization';
 import DoctorList from '../../components/doctor-list';
 import Pharmacy from '../../components/pharmacy';
 import Laboratory from '../../components/lab';
+import About from '../../components/home/about';
 
 
 export default function homepage() {
@@ -18,7 +19,8 @@ export default function homepage() {
       <Visualization/>
       <DoctorList/>
       <Pharmacy/>
-      <Laboratory/> 
+      <Laboratory/>
+      <About/>
     </div>
   );
 }
