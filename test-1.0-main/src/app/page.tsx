@@ -5,6 +5,7 @@ import Timeline from '../../components/timeline';
 import Visualization from '../../components/visualization';
 import DoctorList from '../../components/doctor-list';
 import Pharmacy from '../../components/pharmacy';
+import Laboratory from '../../components/lab';
 
 
 export default function homepage() {
@@ -16,7 +17,8 @@ export default function homepage() {
       <Timeline/>
       <Visualization/>
       <DoctorList/>
-      <Pharmacy/>   
+      <Pharmacy/>
+      <Laboratory/> 
     </div>
   );
 }
