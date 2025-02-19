@@ -7,6 +7,8 @@ import DoctorList from '../../components/doctor-list';
 import Pharmacy from '../../components/pharmacy';
 import Laboratory from '../../components/lab';
 import About from '../../components/home/about';
+import Service from '../../components/home/services';
+import Contatcs from '../../components/home/contacts';
 
 
 export default function homepage() {
@@ -21,6 +23,8 @@ export default function homepage() {
       <Pharmacy/>
       <Laboratory/>
       <About/>
+      <Service/>
+      <Contatcs/>
     </div>
   );
 }
