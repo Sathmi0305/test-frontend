@@ -6,10 +6,7 @@ import Visualization from '../../components/visualization';
 import DoctorList from '../../components/doctor-list';
 import Pharmacy from '../../components/pharmacy';
 import Laboratory from '../../components/lab';
-import About from '../../components/home/about';
-import Service from '../../components/home/services';
-import Contatcs from '../../components/home/contacts';
-
+import patient from '../../components/patient';
 
 export default function homepage() {
   return (
@@ -19,12 +16,8 @@ export default function homepage() {
       <Message/>
       <Timeline/>
       <Visualization/>
-      <DoctorList/>
-      <Pharmacy/>
-      <Laboratory/>
-      <About/>
-      <Service/>
-      <Contatcs/>
+      <Patient/>
+      
     </div>
   );
 }
